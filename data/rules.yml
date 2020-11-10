@@ -7,32 +7,20 @@ rules:
   - intent: goodbye
   - action: utter_goodbye
 
-- rule: follow the book room intent
+- rule: book room rule 
   steps:
-  - intent: Book_room
-  - action: utter_Book_room
+  - intent: book_room
+  - action: utter_book_room
 
-- rule: quantity_1
+- rule: book room  quantity rule 
   steps:
-  - intent: room_quantity_1
-  - action: utter_room_quantity_1_text
-  - action: utter_room_quantity_1
+  - intent: book_room_quantity
+  - action: utter_book_room_quantity
 
-- rule: simple_type
+- rule: book room quantity quality rule 
   steps:
-  - intent: simple
-  - action: utter_simple
-
-- rule: deluxe_type
-  steps:
-  - intent: deluxe
-  - action: utter_deluxe
-
-- rule: quantity_2
-  steps:
-  - intent: room_quantity_2
-  - action: utter_room_quantity_2_text
-  - action: utter_room_quantity_2
+  - intent: book_room_quantity_quality
+  - action: utter_book_room_confirmed
 
 - rule: Say 'I am a bot' anytime the user challenges
   steps:
