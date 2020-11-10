@@ -9,6 +9,15 @@ stories:
   - intent: mood_great
   - action: utter_happy
 
+- story: book room
+  steps:
+  - intent: book_room
+  - action: utter_book_room
+  - intent: book_room_quality
+  - action: utter_book_room_quantity
+  - intent: book_room_quantity_quality
+  - action: utter_book_room_confirmed
+
 - story: sad path 1
   steps:
   - intent: greet
