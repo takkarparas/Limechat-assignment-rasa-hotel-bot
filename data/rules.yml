@@ -1,0 +1,40 @@
+version: "2.0"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: follow the book room intent
+  steps:
+  - intent: Book_room
+  - action: utter_Book_room
+
+- rule: quantity_1
+  steps:
+  - intent: room_quantity_1
+  - action: utter_room_quantity_1_text
+  - action: utter_room_quantity_1
+
+- rule: simple_type
+  steps:
+  - intent: simple
+  - action: utter_simple
+
+- rule: deluxe_type
+  steps:
+  - intent: deluxe
+  - action: utter_deluxe
+
+- rule: quantity_2
+  steps:
+  - intent: room_quantity_2
+  - action: utter_room_quantity_2_text
+  - action: utter_room_quantity_2
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
