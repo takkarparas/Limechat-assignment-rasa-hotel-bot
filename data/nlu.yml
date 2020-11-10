@@ -1,66 +1,128 @@
 version: "2.0"
 
-intents:
-  - greet
-  - Book_room
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
 
-responses:
-  utter_greet:
-  - text: "Hey! How are you?"
+- intent: Book_room
+  examples: |
+    - i want to book a room_quantity
+    - i need some rooms to stay
+    - book rooms
+    - book some rooms
+    - room booking
+    - want to stay
+    - want to use rooms
 
-  utter_Book_room:
-  - text: "Yes sure, How many rooms you want to book?"
-  
-  utter_room_quantity_1_text:
-  - text: "1 room and quality?"
+- intent: room_quantity_1
+  examples: |
+    - one
+    - single
+    - only one
+    - 1
+    - one room
+    - single room
+    - only one room
 
-  utter_room_quantity_2_text:
-  - text: "2 rooms and quality?"
 
-  utter_room_quantity_1:
-  - text: "1 room and quality?"
-    buttons:
-      - title: "Simple"
-        payload: "/simple"
-      - title: "Deluxe"
-        payload: "/deluxe"
+- intent: room_quantity_2
+  examples: |
+    - two
+    - double
+    - only two
+    - 2
+    - two rooms
+    - double rooms
+    - only two rooms
 
-  utter_simple:
-  - text: "Simple qualty room/rooms booked"
+- intent: simple
 
-  utter_deluxe:
-  - text: "Deluxe qualty room/rooms booked"
+- intent: deluxe
 
-  utter_room_quantity_2:
-  - text: "2 rooms"
-    buttons:
-      - title: "Simple"
-        payload: "/simple"
-      - title: "Deluxe"
-        payload: "/deluxe"
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
 
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
 
-  utter_did_that_help:
-  - text: "Did that help you?"
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
 
-  utter_happy:
-  - text: "Great, carry on!"
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
 
-  utter_goodbye:
-  - text: "Bye"
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
 
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
 
-session_config:
-  session_expiration_time: 60
-  carry_over_slots_to_new_session: true
