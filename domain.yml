@@ -3,6 +3,10 @@ version: "2.0"
 intents:
   - greet
   - Book_room
+  - room_quantity_1
+  - room_quantity_2
+  - single
+  - deluxe
   - goodbye
   - affirm
   - deny
