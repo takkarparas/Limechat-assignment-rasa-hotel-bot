@@ -2,11 +2,9 @@ version: "2.0"
 
 intents:
   - greet
-  - Book_room
-  - room_quantity_1
-  - room_quantity_2
-  - single
-  - deluxe
+  - book_room
+  - book_room_quantity
+  - book_room_quantity_quality
   - goodbye
   - affirm
   - deny
@@ -14,40 +12,26 @@ intents:
   - mood_unhappy
   - bot_challenge
 
+entities:
+  - quantity
+
 responses:
   utter_greet:
   - text: "Hey! How are you?"
 
-  utter_Book_room:
-  - text: "Yes sure, How many rooms you want to book?"
+  utter_book_room:
+  - text: "How many rooms you want to book?." 
   
-  utter_room_quantity_1_text:
-  - text: "1 room and quality?"
+  utter_book_room_quantity:
+  - buttons:
+    - title: "Simple"
+      payload: /book_room_quantity_quality{"quality":"simple"}
+    - title: "Deluxe"
+      payload: /book_room_quantity_quality{"quality":"deluxe"}
+    text: "Please select room quality"
 
-  utter_room_quantity_2_text:
-  - text: "2 rooms and quality?"
-
-  utter_room_quantity_1:
-  - text: "1 room and quality?"
-    buttons:
-      - title: "Simple"
-        payload: "/simple"
-      - title: "Deluxe"
-        payload: "/deluxe"
-
-  utter_simple:
-  - text: "Simple qualty room/rooms booked"
-
-  utter_deluxe:
-  - text: "Deluxe qualty room/rooms booked"
-
-  utter_room_quantity_2:
-  - text: "2 rooms"
-    buttons:
-      - title: "Simple"
-        payload: "/simple"
-      - title: "Deluxe"
-        payload: "/deluxe"
+  utter_book_room_confirmed:
+  - text: "Your room/rooms has been confirmed"
 
   utter_cheer_up:
   - text: "Here is something to cheer you up:"
@@ -65,6 +49,9 @@ responses:
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
 
+
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+
+
