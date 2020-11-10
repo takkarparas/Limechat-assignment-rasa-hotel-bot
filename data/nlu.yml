@@ -17,9 +17,9 @@ nlu:
     - goodevening
     - good afternoon
 
-- intent: Book_room
+- intent: book_room
   examples: |
-    - i want to book a room_quantity
+    - i want to book a room
     - i need some rooms to stay
     - book rooms
     - book some rooms
@@ -27,30 +27,18 @@ nlu:
     - want to stay
     - want to use rooms
 
-- intent: room_quantity_1
+- intent: book_room_quantity
   examples: |
-    - one
-    - single
-    - only one
-    - 1
-    - one room
-    - single room
-    - only one room
+    - i want to book [1](quantity) room
+    - i want to book [one](quantity) room
+    - i want to book [2](quantity) room
+    - i want to book [two](quantity) rooms
+    - only [one](quantity)
+    - only [one](quantity) room
+    - only [two](quantity)
+    - only [two](quantity) rooms
 
-
-- intent: room_quantity_2
-  examples: |
-    - two
-    - double
-    - only two
-    - 2
-    - two rooms
-    - double rooms
-    - only two rooms
-
-- intent: simple
-
-- intent: deluxe
+- intent: book_room_quantity_quality
 
 - intent: goodbye
   examples: |
@@ -125,4 +113,3 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
-
