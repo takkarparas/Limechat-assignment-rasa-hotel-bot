@@ -22,7 +22,46 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
+  - intent: mood_unhappyversion: "2.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: book room
+  steps:
+  - intent: book_room
+  - action: utter_book_room
+  - intent: book_room_quality
+  - action: utter_book_room_quantity
+  - intent: book_room_quantity_quality
+  - action: utter_book_room_confirmed
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
   - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
   - action: utter_cheer_up
   - action: utter_did_that_help
   - intent: affirm
