@@ -30,15 +30,30 @@ nlu:
 - intent: book_room_quantity
   examples: |
     - i want to book [1](quantity) room
-    - i want to book [one](quantity) room
     - i want to book [2](quantity) room
-    - i want to book [two](quantity) rooms
-    - only [one](quantity)
-    - only [one](quantity) room
-    - only [two](quantity)
-    - only [two](quantity) rooms
+    - i want to book [2](quantity) rooms
+    - only [1](quantity)
+    - only [1](quantity) room
+    - only [2](quantity)
+    - only [2](quantity) rooms
 
 - intent: book_room_quantity_quality
+  examples: |
+    - i want to book [1](quantity) [simple](quality) room
+    - i want to book [2](quantity) [simple](quality) room
+    - i want to book [2](quantity) [simple](quality) rooms
+    - only [1](quantity) [simple](quality)
+    - only [1](quantity) [simple](quality) room
+    - only [2](quantity) [simple](quality) 
+    - only [2](quantity) [simple](quality) rooms
+    - i want to book [1](quantity) [deluxe](quality) room
+    - i want to book [2](quantity) [deluxe](quality) room
+    - i want to book [2](quantity) [deluxe](quality) rooms
+    - only [1](quantity) [deluxe](quality)
+    - only [1](quantity) [deluxe](quality) room
+    - only [2](quantity) [deluxe](quality) 
+    - only [2](quantity) [deluxe](quality) rooms
+  
 
 - intent: goodbye
   examples: |
