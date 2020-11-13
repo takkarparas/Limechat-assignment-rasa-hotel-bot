@@ -7,12 +7,62 @@ rules:
   - intent: goodbye
   - action: utter_goodbye
 
+- rule: restaurant timing faq
+  steps:
+  - intent: restaurant_timing
+  - action: utter_restaurant_timing
+
+- rule: breakfast timing faq
+  steps:
+  - intent: breakfast_timing
+  - action: utter_breakfast_timing
+
+- rule: breakfast availability faq
+  steps:
+  - intent: breakfast_availability
+  - action: utter_breakfast_availability
+
+- rule: restaurant faq
+  steps:
+  - intent: restaurant
+  - action: utter_restaurant
+
+- rule: cancellation policy faq
+  steps:
+  - intent: cancellation_policy
+  - action: utter_cancellation_policy
+
+- rule: cancel reservation faq
+  steps:
+  - intent: cancel_reservation
+  - action: utter_cancel_reservation
+
+- rule: checkout timing faq
+  steps:
+  - intent: checkout_timing
+  - action: utter_checkout_timing
+
+- rule: checkin_timing faq
+  steps:
+  - intent: checkin_timing
+  - action: utter_checkout_timing
+
 - rule: book room rule 
   steps:
   - intent: book_room
   - action: utter_book_room
 
-- rule: book room  quantity rule 
+- rule: schedule room cleaning
+  steps:
+  - intent: schedule_cleaning
+  - action: utter_schedule_cleaning
+
+- rule: schedule room cleaning time
+  steps:
+  - intent: schedule_cleaning_time
+  - action: utter_schedule_cleaning_time
+
+- rule: book room quantity rule 
   steps:
   - intent: book_room_quantity
   - action: utter_book_room_quantity
@@ -21,6 +71,7 @@ rules:
   steps:
   - intent: book_room_quantity_quality
   - action: utter_book_room_confirmed
+
 
 - rule: Say 'I am a bot' anytime the user challenges
   steps:
