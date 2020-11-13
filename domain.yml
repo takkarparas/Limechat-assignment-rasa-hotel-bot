@@ -11,19 +11,86 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - schedule_cleaning
+  - schedule_cleaning_time
+  - restaurant_timing:
+    - triggers: action_restaurant_timing
+  - breakfast_timing:
+      triggers: action_breakfast_timing
+  - breakfast_availability:
+      triggers: action_breakfast_availability
+  - restaurant:
+      triggers: action_restaurant
+  - cancellation_policy:
+      triggers: action_cancellation_policy
+  - cancel_reservation:
+      triggers: action_cancel_reservation
+  - chechin_timing:
+      triggers: action_chechin_timing
+  - checkout_timing:
+      triggers: action_checkout_timing
 
 entities:
   - quantity
+  - quality
+  - time
+
+actions:
+  - action_reset_slots
+  - action_restaurant_timing
+  - action_breakfast_timing
+  - action_breakfast_availability
+  - action_restaurant
+  - action_cancellation_policy
+  - action_cancel_reservation
+  - action_chechin_timing
+  - action_checkout_timing
 
 slots:
   quantity:
     type: unfeaturized
   quality:
     type: unfeaturized
+  time:
+    type: unfeaturized
 
 responses:
   utter_greet:
   - text: "Hey! How are you?"
+
+  utter_restaurant_timing:
+  - text: "Our restaurant serves a dazzling 24-hour menu. "
+
+  utter_breakfast_timing:
+  - text: "Monday through Friday breakfast is 6 am to 9 am. On Saturday and Sunday, we are open from 7 am to 10:30 am."
+
+  utter_breakfast_availability:
+  - text: "The hotel provides its guests with a free made-to-order breakfast each morning."
+
+  utter_restaurant:
+  - text: "Yes, the hotel has a restaurant called the Zephyr Bar. With our menu we strive to reflect the historic art and the spirit of our neighborhood by offering a glimpse into what makes our area unique."
+
+  utter_cancellation_policy:
+  - text: "The booking deposit is refundable if the cancellation occurs at least 15 days before arrival. For cancellations made after this limit, a penalty will be imposed based on the cancellation policy."
+
+  utter_cancel_reservation:
+  - text: "To cancel a reservation, select the “Reservations” link from the homepage."
+  - text: "On the Reservations page, under the heading ‘View, Change or Cancel a Reservation,’ enter your confirmation number, and either the last name on the reservation or the last four digits of the credit card used to make the reservation."
+
+  utter_chechout_timing:
+  - text: "Check-out time is 11 AM. Please contact the reception for late checkout requests"
+
+  utter_checkin_timing:
+  - text: "Check-in time starts at 4 PM. Minimum check-in age is 21. Please contact the reception for early check-in requests."
+
+  utter_schedule_cleaning:
+  - text: "Sure, what time you want to schedule your cleaning?"
+
+  utter_schedule_cleaning_time:
+  - text: "Sure, we will send someone to clean your room as discussed"
+
+  utter_schedule_cleaning_scheduled:
+  - text: "Sure, we will send someone to clean your room at mentioned time"
 
   utter_book_room:
   - text: "How many rooms you want to book?." 
@@ -59,3 +126,5 @@ responses:
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+
+
