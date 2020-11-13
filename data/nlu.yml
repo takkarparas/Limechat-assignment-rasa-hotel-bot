@@ -1,6 +1,119 @@
 version: "2.0"
 
 nlu:
+
+- intent: restaurant_timing
+  examples: |
+    - what are timings of your restaurant?
+    - what is the time of the restaurant?
+    - timings of restaurant
+    - restaurant open time
+    - restaurant open timings
+    - restaurant timings
+    - till when restaurant remain open?
+    - till what time will the restaurant remain open?
+    - can you share the timings of restaurant?
+
+- intent: breakfast_timing
+  examples: |
+    - what is the time for breakfast?
+    - time for doing breakfast?
+    - what are the breakfast timings?
+    - can you tell me about timings of breakfast?
+    - tell me about breakfast timings
+    - want to know about breakfast timings
+    - breakfast timings what are they?
+    - what is the time for breakfast?
+    - when is breakfast served?
+    - which time is the breakfast served?
+    - you serve breakfast at what time?
+    - what is the timing for breakfast? 
+
+- intent: breakfast_availability
+  examples: |
+    - does the hotel offer breakfast?
+    - is there breakfast offered by the hotel?
+    - is breakfast facility available?
+    - is breakfast there?
+    - can i get breakfast here?
+    - do you provide breakfast?
+    - breakfast?
+    - do you serve breakfast?
+    - is breakfast available?    
+
+- intent: restaurant
+  examples: |
+    - does the hotel have a restaurant?
+    - do you have a restaurant?
+    - is there a restaurant?
+    - is there a restaurant in the hotel?
+    - tell me about the restaurant
+    - can you tell me about any restaurant in the hotel?
+    - are there restaurants in the hotel?
+    - number of restaurants?
+    - can i find restaurants here?
+    - i heard there is a restaurant also
+    - inform me about the restaurant
+    - where is restaurant?
+
+- intent: cancellation_policy
+  examples: |
+    - what is your cancellation policy?
+    - can you state your cancellation policy
+    - i would like to know your cancellation policy
+    - show me your cancellation policy
+    - do you have any cancellation policy?
+    - i want to see your cancellation policy
+    - where is your cancellation policy?
+
+
+- intent: cancel_reservation
+  examples: |
+    - i want to cancel the reservation that i made 
+    - cancel my reservation that i made earlier 
+    - i would like to cancel my reservation
+    - cancel my reservation
+    - can you cancel my reservation?
+    - how do i cancel my reservation?
+    - can i cancel my reservation?
+    - please cancel my reservation
+    - i request you to cancel the reservation that i made
+    - it would be great if you could cancel my reservation
+
+- intent: chechout_timing
+  examples: |
+    - what are your check-out timings?
+    - check out timings?
+    - check out time
+    - what is the check-in time?
+    - what is the check in time?
+    - can you tell me your check-out timings?
+    - can you tell me your check out timings?
+    - i would like to know your check-out timings
+    - tell your check-out timings
+    - when can I check out?
+    - check-out?
+    - could you tell me when to check-out?
+    - when check in?
+    - i want to check out. can you tell me check out timings?
+
+- intent: checkin_timing
+  examples: |
+    - what are your check-in timings?
+    - check in timings?
+    - check in time
+    - what is the check-in time?
+    - what is the check in time?
+    - can you tell me your check-in timings?
+    - can you tell me your check in timings?
+    - i would like to know your check-in timings
+    - tell your check-in timings
+    - when can I check in?
+    - check-in?
+    - could you tell me when to check-in?
+    - when check in?
+    - i want to check in. can you tell me check in timing?
+
 - intent: greet
   examples: |
     - hey
@@ -17,6 +130,29 @@ nlu:
     - goodevening
     - good afternoon
 
+- intent: schedule_cleaning
+  examples: |
+    - I want to have my room cleaned
+    - send someone to clean my room
+    - Can you send someone to clean rooms
+    - rooms are not clean
+    - rooms are dirty
+    - send someone to clean room
+    - clean my room
+    - send someone my room is dirty
+
+- intent: schedule_cleaning_time
+  examples: |
+    - room clean [right now](time:now)
+    - clean my room [now](time)
+    - clean rooms [asap](time:now)
+    - clean my room [now](time)
+    - send someone [now](time) my room is dirty
+    - room clean at [5](time:scheduled) PM
+    - clean my room after [2](time:scheduled) hours
+    - clean rooms after [1](time:scheduled) hour
+    - send someone right after [15](time:scheduled) minutes to clean room
+
 - intent: book_room
   examples: |
     - i want to book a room
@@ -32,10 +168,8 @@ nlu:
     - i want to book [1](quantity) room
     - i want to book [2](quantity) room
     - i want to book [2](quantity) rooms
-    - only [1](quantity)
-    - only [1](quantity) room
-    - only [2](quantity)
-    - only [2](quantity) rooms
+    - i need [2]quantity rooms to stay
+    - i need [1](quality) room to stay
 
 - intent: book_room_quantity_quality
   examples: |
